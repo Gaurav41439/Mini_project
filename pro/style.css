@@ -1,0 +1,56 @@
+/*this the background colour and primary colour for the website */
+:root{
+  --primary-color: #e50914;
+  --dark-color: #141414;
+  
+}
+
+
+body {
+  font-family: 'Alatsi', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+
+
+.container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title{
+  font-family:'Times New Roman', Times, serif;
+  font-size:200px;
+  color: aliceblue;
+  border: white;
+  transition: 1s;
+}
+
+.title:hover{
+  color: rgb(222, 61, 243);
+}
+
+canvas {
+  width: 100%;
+}
+
+.btn{
+  text-decoration: none;
+  color: rgb(251, 251, 251);
+  background-color: rgb(174, 12, 238);
+  text-align: center;
+  font-size: xx-large;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+
