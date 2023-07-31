@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genre</title>
+  <link rel="stylesheet" href="genre.css">
+
+</head>
+<body>
+  <header class="logo">
+    <h1 class="logoname">pancakes</h1>
+  </header>
+  <section class="search">
+
+    <input id="bar" type="text" placeholder="Search..." class="srchbar"> <br>
+
+    <button id="searchbtn">Search</button>
+</section>
+
+<section id="selector" class="container">
+  <div class="selectorHeading">
+    <h2>Search by Genre</h2> <br>
+
+    <button onclick="myFunc('Button 1 clicked')">Button 1</button>
+    <button onclick="myFunc('Button 2 clicked')">Button 2</button>
+
+    <button class="btn green" onclick="select('Horror');" id="Horror" >Horror</button>
+    <button class="btn green" onclick="select('Comedy');" id="Comedy">Comedy</button>
+    <button class="btn green" onclick="select();" >Romance</button> <br>
+    <button class="btn green" onclick="select();" >Action</button>
+    <button class="btn green" onclick="select();" >Thriller</button>
+    <button class="btn green" onclick="select();" >Mystery</button><button class="btn green" onclick="select();" >Drama</button> <br>
+    <button class="btn green" onclick="select();" >Crime</button>
+    <button class="btn green" onclick="select();" >Sci-Fi</button>
+    <button class="btn green" onclick="select();" >Fantasy</button> <br>
+    <button class="btn green" onclick="select();" >Musical</button><button class="btn green" onclick="select();" >History</button><button class="btn green" onclick="select();" >Documentry</button><button class="btn green" onclick="select();" >War</button><br>
+    <button class="btn green" onclick="select();" >Epic</button><button class="btn green" onclick="select();" >Sports</button><button class="btn green" onclick="select();" >Teen</button>
+  </div>
+</section>
+<script src="genre.js"></script>
+</body>
+</html>
