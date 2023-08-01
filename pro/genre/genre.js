@@ -1,22 +1,30 @@
 // empty array hai ye
-const selected_genre = [];
-var i = 0;
+var count = 0;
+var button = document.getElementById('add');
+
+const string = [];
 function select(elementId){
- 
-  // ink is a temp variable that contains the selected genre
+  var i =0;
+
+
   var ink = document.getElementById(elementId);
-  
-  // selected button ka colour change kiya to show it's selected
-  ink.style.background = "green";
-  ink.style.color = "white";
- 
- // selected genre appended to the empty array so that's it stored somewhere for future use
-  selected_genre[i] = ink;
-  console.log(selected_genre[i]);
-  i = i+1;
+  if (string.includes(ink.id)){
+    
+    const index = string.indexOf(ink.id);
+    if (index > -1) { // only splice array when item is found
+      string.splice(index, 1); // 2nd parameter means remove one item only
+    }
+    ink.style.background = "white";
+    ink.style.color = "green";
+    console.log(string);
+  }
+  else{
+    string.push(ink.id);
+    ink.style.background = "green";
+    ink.style.color = "white";
+    console.log(string);
+  }
 
 }
 
-function myFunc(param) {
-  console.log(param)
-}
+
