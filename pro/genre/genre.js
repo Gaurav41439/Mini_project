@@ -27,7 +27,7 @@ function confirmGenres() {
       localStorage.setItem('suggestedMovies', JSON.stringify(data));
 
       // Redirect to final.js
-      window.location.href = 'final.html';
+      window.location.href = '../finaloutput/final.html';
   })
   .catch((error) => {
       console.error('Error:', error);
