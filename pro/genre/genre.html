@@ -12,16 +12,16 @@
   <header class="logo">
     <h1 class="logoname">pancakes</h1>
   </header>
-  <section class="search">
+ <!-- <section class="search">
 
     <input id="bar" type="text" placeholder="Search..." class="srchbar"> <br>
 
     <button id="searchbtn">Search</button>
-</section>
+</section> --> 
 
 <section id="selector" class="container">
   <div class="selectorHeading">
-    <h2>Search by Genre</h2> <br>
+    
 
 
     <button class="btn green" onclick="select('Horror');" id="Horror" >Horror</button>
@@ -29,14 +29,25 @@
     <button class="btn green" onclick="select('Romance');" id="Romance" >Romance</button> <br>
     <button class="btn green" onclick="select('Action');" id="Action">Action</button>
     <button class="btn green" onclick="select('Thriller');" id="Thriller" >Thriller</button>
-    <button class="btn green" onclick="select('Mystery');" id="Mystery" >Mystery</button><button class="btn green" onclick="select('Drama');" id="Drama" >Drama</button> <br>
+    <button class="btn green" onclick="select('Mystery');" id="Mystery" >Mystery</button>
+    <button class="btn green" onclick="select('Drama');" id="Drama" >Drama</button> <br>
     <button class="btn green" onclick="select('Crime');" id="Crime">Crime</button>
     <button class="btn green" onclick="select('Sci-fi');" id="Sci-fi" >Sci-Fi</button>
     <button class="btn green" onclick="select('Fantasy');" id="Fantasy">Fantasy</button> <br>
-    <button class="btn green" onclick="select('Music');" id="Music" >Musical</button><button class="btn green" onclick="select('History');" id="History">History</button><button class="btn green" onclick="select('Documentary');" id="Documentary" >Documentry</button><button class="btn green" onclick="select('War');" id="War" >War</button><br>
-    <button class="btn green" onclick="select('Epic');" id="Epic" >Epic</button><button class="btn green" onclick="select('Biography');" id="Biography">Biography</button><button class="btn green" onclick="select('Teen');" id="Teen">Teen</button>
+    <button class="btn green" onclick="select('Music');" id="Music" >Musical</button>
+    <button class="btn green" onclick="select('History');" id="History">History</button>
+    <button class="btn green" onclick="select('Documentary');" id="Documentary" >Documentry</button>
+    <button class="btn green" onclick="select('War');" id="War" >War</button><br>
+    <button class="btn green" onclick="select('Epic');" id="Epic" >Epic</button>
+    <button class="btn green" onclick="select('Biography');" id="Biography">Biography</button>
+    <button class="btn green" onclick="select('Teen');" id="Teen">Teen</button>
   </div>
+  <br><br>
+  <div class="search"><button id="searchbtn" >Confirm Genres</button></div>
+
 </section>
 <script src="genre.js"></script>
+<div id="suggestedMovie"></div>
+
 </body>
 </html>

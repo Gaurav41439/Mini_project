@@ -175,3 +175,4 @@ function norm(){
   var ink = document.getElementById('pick');
       ink.style.color = "rgb(255,255,255)";
 }
+

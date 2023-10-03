@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\vipul\\Downloads\\mysql-connector-j-8.1.0\\mysql-connector-j-8.1.0.jar",
+        "c:\\Users\\vipul\\Downloads\\javax.servlet-api-3.1.0.jar"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "python.testing.pytestArgs": [
+        "pro"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

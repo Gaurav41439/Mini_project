@@ -27,7 +27,7 @@ def get_movies():
 
         with connection.cursor() as cursor:
             # Building the case-insensitive SQL query for selected genres
-            query_builder = ["SELECT DISTINCT movie_name, movie_id FROM movies WHERE "]
+            query_builder = ["SELECT DISTINCT movie_name, id FROM movies WHERE "]
             for i, genre in enumerate(selected_genres):
                 query_builder.append("LOWER(genre) LIKE %s")
                 if i < len(selected_genres) - 1:
@@ -42,8 +42,8 @@ def get_movies():
 
             for row in cursor.fetchall():
                 movie_name = row[0]
-                movie_id = row[1]  # Include the movie ID
-                suggested_movies.append({"title": movie_name, "movie_id": movie_id})
+                id = row[1]  # Include the movie ID
+                suggested_movies.append({"title": movie_name, "id": id})
 
         if suggested_movies:
             response_data = suggested_movies
@@ -62,4 +62,4 @@ def get_movies():
             print("Connection closed!")
 
 if __name__ == "__main__":
-    app.run(host="localhost", port=8000)   
+    app.run(host="localhost", port=8000)
