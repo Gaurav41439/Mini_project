@@ -23,11 +23,11 @@ def get_movies():
         if connection.is_connected():
             print("Connected to database")
 
-        suggested_movies = set()  # Use a set to store the suggested movies to avoid confusion in case of duplicate entries
+        suggested_movies = []  # Use a list to store the suggested movies
 
         with connection.cursor() as cursor:
             # Building the case-insensitive SQL query for selected genres
-            query_builder = ["SELECT DISTINCT movie_name FROM movies WHERE "]
+            query_builder = ["SELECT DISTINCT movie_name, movie_id FROM movies WHERE "]
             for i, genre in enumerate(selected_genres):
                 query_builder.append("LOWER(genre) LIKE %s")
                 if i < len(selected_genres) - 1:
@@ -42,11 +42,12 @@ def get_movies():
 
             for row in cursor.fetchall():
                 movie_name = row[0]
-                suggested_movies.add(movie_name)
+                movie_id = row[1]  # Include the movie ID
+                suggested_movies.append({"title": movie_name, "movie_id": movie_id})
 
         if suggested_movies:
-            response_data = list(suggested_movies)
-            return jsonify(response_data) #Return the response data in JSON format to genre.js
+            response_data = suggested_movies
+            return jsonify(response_data)  # Return the response data in JSON format to genre.js
         else:
             return jsonify({"message": "No more movies found matching the genres."})
 
@@ -60,8 +61,5 @@ def get_movies():
             connection.close()
             print("Connection closed!")
 
-#THIS IS THE FIRST FUNCTION THAT WILL BE EXECUTED.
 if __name__ == "__main__":
-    app.run(host="localhost", port=8000) #Run the backend on localhost:8000 and frontend on localhost:5500
-    
-    
+    app.run(host="localhost", port=8000)   

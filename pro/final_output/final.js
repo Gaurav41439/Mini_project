@@ -15,20 +15,31 @@ function getQueryParameters() {
 // Initialize an index to keep track of the current movie
 let currentMovieIndex = 0;
 
-
 // Function to display the current movie
 function displayCurrentMovie() {
     const movieContainer = document.getElementById('movie-container');
     movieContainer.innerHTML = '';
-    
+
     if (currentMovieIndex >= 0 && currentMovieIndex < suggestedMovies.length) {
+        const movie = suggestedMovies[currentMovieIndex];
         const movieElement = document.createElement('div');
-        movieElement.textContent = suggestedMovies[currentMovieIndex];
+
+        // Create a heading for the movie title
+        const titleElement = document.createElement('h2');
+        titleElement.textContent = movie.title;
+        movieElement.appendChild(titleElement);
+
+        // Create an image element for the poster
+        const posterElement = document.createElement('img');
+        posterElement.src = `path_to_posters/${movie.movie_id}.jpg`; // Replace with the actual path to your posters
+        movieElement.appendChild(posterElement);
+
         movieContainer.appendChild(movieElement);
     } else {
         movieContainer.textContent = 'No more movies found.';
     }
 }
+
 
 // Call the displayCurrentMovie function to show the initial movie
 displayCurrentMovie();
