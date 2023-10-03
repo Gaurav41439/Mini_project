@@ -8,7 +8,7 @@ console.log(typeof (suggestedMovies));
 let currentMovieIndex = 0;
 
 function getPosterUrl(movieId) {
-    return `http://localhost:5500/posters/${movieId}.jpg`; 
+    return `http://localhost:5500/pro/posters/${movieId}.jpg`; 
 }
 
 
