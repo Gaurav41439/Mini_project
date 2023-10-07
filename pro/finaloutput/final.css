@@ -1,0 +1,62 @@
+.poster{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    position: sticky; 
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 24%;
+    margin: 0 auto;
+    border:none;
+    border-radius:20px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 20px;
+    text-align: center;  
+    font-size: 25px;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 11px;
+    padding-bottom: 15px;
+}
+.first{
+    padding-top: 10px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+button.nbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
+    height: 50px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 15px;
+    border:none;
+    padding: auto;
+    border-radius:20px;
+}
+#no-more-movies p{
+    text-align: center;
+    font-size: 150px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#no-more-movies button{
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto ;
+    border:none;
+    padding: 10px 20px;
+    border-radius:20px;
+}
